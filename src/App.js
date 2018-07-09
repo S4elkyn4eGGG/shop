@@ -18,7 +18,9 @@ class App extends Component {
 }
 
 export default withRouter(connect(
-    state => ({}),
+    state => ({
+        phones: state.phones
+    }),
     dispatch => ({
         fetchPhones: () => {
             dispatch(fetchPhones());
