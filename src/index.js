@@ -10,6 +10,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import reducer from 'reducers';
 
 import Main from 'containers/Main';
+import InfoPage from 'containers/InfoPage';
 
 const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk)));
 
@@ -17,7 +18,10 @@ ReactDOM.render(
     <BrowserRouter>
         <Switch>
             <Provider store={store}>
-                <Route path={'/'} component={Main} exact/>
+                <div>
+                    <Route path={'/'} component={Main} exact/>
+                    <Route path={'/about'} component={InfoPage} exact/>
+                </div>
             </Provider>
         </Switch>
     </BrowserRouter>
