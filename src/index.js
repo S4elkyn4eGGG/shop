@@ -20,7 +20,7 @@ ReactDOM.render(
             <Provider store={store}>
                 <div>
                     <Route path={'/'} component={Main} exact/>
-                    <Route path={'/about'} component={InfoPage} exact/>
+                    <Route path={'/:id'} component={InfoPage} exact/>
                 </div>
             </Provider>
         </Switch>
